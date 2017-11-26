@@ -1,2 +1,0 @@
-- Create script to install, run and restart nginx
-- Add steps to run project inside dokku server in README.md
