@@ -8,4 +8,4 @@ setup:
 	pip install -r requirements-local.txt
 
 run:
-	python dokku_dashboard/app.py
+	gunicorn -c gunicorn.cfg dokku_dashboard.app:app
