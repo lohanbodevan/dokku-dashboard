@@ -1,4 +1,4 @@
-# Dokku Dashboard <a href="https://travis-ci.org/lohanbodevan/dokku-dashboard"><img alt="Travis Status" src="https://travis-ci.org/lohanbodevan/dokku-dashboards.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/lohanbodevan/dokku-dashboard/blob/master/LICENSE)
+# Dokku Dashboard <a href="https://travis-ci.org/lohanbodevan/dokku-dashboard"><img alt="Travis Status" src="https://travis-ci.org/lohanbodevan/dokku-dashboard.svg?branch=master"></a> [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/lohanbodevan/dokku-dashboard/blob/master/LICENSE)
 
 
 [Dokku](https://github.com/dokku/dokku) is a powerfull and lightweight [PaaS](https://en.wikipedia.org/wiki/Platform_as_a_service) with `git push` deployment.  
