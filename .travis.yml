@@ -1,0 +1,7 @@
+language: python
+python:
+    - "3.5"
+    - "3.6"
+install: make setup
+before_script: make flake8
+script: make test
