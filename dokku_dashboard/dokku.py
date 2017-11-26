@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 from dokku_dashboard.dokku_cmds import Dokku
 
@@ -9,9 +10,15 @@ def get_list_apps_command():
     return str(apps)
 
 
+def filter_apps(app):
+    app_name = os.environ.get('APP_NAME', 'dokku-dashboard')
+    return app and app != app_name
+
+
 def format_stdout(stdout):
     decoded = stdout.decode('utf-8')
-    return [i.strip() for i in decoded.split('\n') if i.strip()]
+    apps = map(str.strip, decoded.split('\n'))
+    return list(filter(filter_apps, apps))
 
 
 def list_apps():

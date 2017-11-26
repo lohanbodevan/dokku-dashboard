@@ -4,6 +4,10 @@ flake8:
 test:
 	pytest tests
 
+setup-os:
+	apt-get update
+	grep -v '^#\s*' requirements.apt |  xargs -r -- apt-get install -y
+
 setup:
 	pip install -r requirements-local.txt
 

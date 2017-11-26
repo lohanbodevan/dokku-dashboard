@@ -2,27 +2,31 @@
 
 
 ## Install from source code
-### Requirements
+### OS Requirements
 * Python 3.x
-* Virtualenv
 
 ### Setup
-1. Create virtualenv
+1. Install OS dependencies
+```bash
+make setup-os
+```
+
+2. Create virtualenv
 ```bash
 virtualenv --python=python3 venv
 ```
 
-2. Activate virtualenv
+3. Activate virtualenv
 ```bash
-. venv/bin/activate
+source venv/bin/activate
 ```
 
-3. Install dependencies
+4. Install app dependencies
 ```bash
 make setup
 ```
 
-4. Run
+5. Run
 ```bash
 make run
 ```
