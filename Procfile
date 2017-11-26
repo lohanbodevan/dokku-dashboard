@@ -1,1 +1,1 @@
-web: gunicorn -c gunicorn.cfg dokku_dashboard.app:app
+web: python dokku_dashboard/app.py
