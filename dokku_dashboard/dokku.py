@@ -11,7 +11,7 @@ def get_list_apps_command():
 
 def format_stdout(stdout):
     decoded = stdout.decode('utf-8')
-    return [i.strip() for i in decoded.split('\n')]
+    return [i.strip() for i in decoded.split('\n') if i.strip()]
 
 
 def list_apps():

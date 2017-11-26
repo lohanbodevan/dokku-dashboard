@@ -17,3 +17,10 @@ class DokkuTest(unittest.TestCase):
 
         assert apps_list == ['nice_app', 'good_app']
 
+    def test_format_stdout_should_return_striped_one_item_list(self):
+        stdout = b"""nice_app
+        """
+
+        apps_list = format_stdout(stdout)
+
+        assert apps_list == ['nice_app']
