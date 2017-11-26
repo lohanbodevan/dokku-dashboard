@@ -10,7 +10,7 @@ class DokkuTest(unittest.TestCase):
         assert cmd == 'dokku --quiet apps:list'
 
     def test_format_stdout_should_return_striped_list(self):
-        stdout = """nice_app
+        stdout = b"""nice_app
         good_app"""
 
         apps_list = format_stdout(stdout)
