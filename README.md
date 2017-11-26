@@ -37,6 +37,10 @@ cd /home/dokku/dokku-dashboard
 ./start.sh
 ```
 
+## Endpoints
+Access `Dokku Dashboard` as `http://dashboard.<your_dokku_server_domain>/apps`
+
+
 ## Install for development purpose
 ### Setup
 1. Install OS dependencies
