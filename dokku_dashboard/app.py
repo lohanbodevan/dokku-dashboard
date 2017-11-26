@@ -1,7 +1,7 @@
 import os
 from http.client import OK
 
-from flask import jsonify
+from flask import jsonify, render_template
 
 from dokku_dashboard import app
 from dokku_dashboard.dokku import list_apps
@@ -14,7 +14,7 @@ def healthcheck():
 
 @app.route('/apps', methods=['GET'])
 def apps():
-    return jsonify({"apps": list_apps()}), OK.value
+    return render_template('home.html', apps=list_apps())
 
 
 if __name__ == '__main__':
