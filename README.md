@@ -4,6 +4,8 @@
 The goal of this project is build a web application dashboard above `Dokku` command line tool to manage apps.
 
 
+## OS Requirements
+* Python 3.x
 ## Install
 1. SSH into your `Dokku` server host
 
@@ -14,7 +16,7 @@ sudo su - dokku
 
 3. Clone this repository in `Dokku` home folder and exit dokku user
 ```bash
-cd /home/dokku/dokku-dashboard
+cd /home/dokku
 git clone https://github.com/lohanbodevan/dokku-dashboard.git
 exit
 ```
@@ -29,10 +31,7 @@ sudo su
 ./start.sh
 ```
 
-## Install from source code for development propose
-### OS Requirements
-* Python 3.x
-
+## Install for development purpose
 ### Setup
 1. Install OS dependencies
 ```bash
