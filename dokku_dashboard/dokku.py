@@ -3,7 +3,7 @@ import subprocess
 from dokku_dashboard.dokku_cmds import Dokku
 
 
-def get_apps():
+def get_list_apps_command():
     apps = Dokku().apps
     apps.parent_cmd.quiet()
     return str(apps)
@@ -14,6 +14,6 @@ def format_stdout(stdout):
 
 
 def list_apps():
-    apps = get_apps()
-    result = subprocess.run([apps], stdout=subprocess.PIPE)
+    cmd = get_list_apps_command()
+    result = subprocess.run(cmd.split(), stdout=subprocess.PIPE)
     return format_stdout(result.stdout)
