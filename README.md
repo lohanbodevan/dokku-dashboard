@@ -15,24 +15,30 @@ The goal of this project is build a web application dashboard above `Dokku` comm
 sudo su - dokku
 ```
 
-3. Clone this repository in `Dokku` home folder and exit dokku user
+3. Set dashboard environment variables
+```bash
+export SERVER_PROTOCOL=http
+export SERVER_HOST=platform.domain.com
+```
+
+4. Clone this repository in `Dokku` home folder and exit dokku user
 ```bash
 cd /home/dokku
 git clone https://github.com/lohanbodevan/dokku-dashboard.git
 exit
 ```
 
-4. Login as root
+5. Login as root
 ```bash
 sudo su
 ```
 
-5. Go to application folder
+6. Go to application folder
 ```bash
 cd /home/dokku/dokku-dashboard
 ```
 
-6. Start APP
+7. Start APP
 ```bash
 ./start.sh
 ```
@@ -40,6 +46,7 @@ cd /home/dokku/dokku-dashboard
 ## Endpoints
 Access `Dokku Dashboard` as `http://dashboard.<your_dokku_server_domain>/apps`
 
+![Dashboard](docs/dashboard.png?raw=true "Dashboard")
 
 ## Install for development purpose
 ### Setup

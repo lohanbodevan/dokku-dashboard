@@ -1,7 +1,49 @@
 <!doctype html>
-<title>Dokku Dashboard</title>
-<ul>
-{% for app in apps %}
-  <li>{{ app }}</li>
-{% endfor %}
-</ul>
+<html>
+    <head>
+        <title>Dokku Dashboard</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <style>
+            body {
+                background-color: #f0f0f0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Dokku Dashboard</h1>
+            <hr>
+            <br />
+
+            <div class="row">
+                {% for app in apps %}
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card bg-light mb-3" style="max-width: 20rem;">
+                            <div class="card-header">{{ app.name }} <span class="badge badge-success">{{ app.status }}</span></div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <p>
+                                        <b>URL:</b><br />
+                                        <a href="{{ app.url }}">{{ app.url }}</a>
+                                    </p>
+
+                                    <p>
+                                        <b>Repository:</b>
+                                        {{ app.repository }}
+                                    </p>
+                                </p>
+
+                                <a class="btn btn-outline-primary" href="#" role="button">Manage</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
